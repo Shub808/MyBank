@@ -1,79 +1,38 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# MyBank — React Native banking app UI
 
-# Getting Started
+A React Native (0.73) mobile banking interface with splash, sign-up, login, a home dashboard, card details and a transfer flow. State is managed with Redux Toolkit and navigation with React Navigation.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Personal project by Shubham Naik.** All names, balances and transactions are fictional demo data. This is a UI and state-management exercise, not a real banking product: there is no backend, no real authentication and no real money movement.
 
-## Step 1: Start the Metro Server
+## Screens
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+| Screen | What it does |
+|---|---|
+| Splash | Brand screen that routes to login |
+| Sign up / Login | Form flows backed by a Redux auth slice |
+| Home | Account summary, cards, charts and promo cards |
+| Card details | Card information view |
+| Transfer | Transfer form with validation, recorded in a transactions slice |
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Stack
 
-```bash
-# using npm
-npm start
+React Native 0.73 · React 18 · Redux Toolkit · React Navigation (stack, native-stack, drawer) · AsyncStorage · react-native-linear-gradient · Jest
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+## Run it
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm install
+npm start          # Metro bundler on port 8082
+npm run android    # or: npm run ios
+npm test           # smoke test
 ```
 
-### For iOS
+## Status
 
-```bash
-# using npm
-npm run ios
+- `tsc --noEmit`, ESLint (no errors) and the Jest smoke test pass.
+- The Android JavaScript bundle builds with Metro.
+- Not run on a device or emulator by the author's assistant during this clean-up; verify on your own device before demoing.
 
-# OR using Yarn
-yarn ios
-```
+## Author
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Shubham Naik — [github.com/Shub808](https://github.com/Shub808)
